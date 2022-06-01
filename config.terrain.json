@@ -23,7 +23,7 @@
   "localterra": {
     "_connection": {
       "chainID": "localterra",
-      "URL": "http://localhost:3060"
+      "URL": "http://localhost:1317"
     }
   }
 }
