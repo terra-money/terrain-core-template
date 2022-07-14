@@ -1,23 +1,12 @@
-import { BlockTxBroadcastResult } from "@terra-money/terra.js";
 import { Env } from "@terra-money/terrain";
+import { {{client-name}} } from './clients/{{client-name}}'
 
-export class Lib {
+export class Lib extends {{client-name}} {
   env: Env;
 
-  constructor(env: Env){
+  constructor(env: Env) {
+    super(env.client, env.defaultWallet, env.refs['{{project-name}}'].contractAddresses.default)
     this.env = env;
-  }
-
-  getCount = (env = this.env) => {
-    return env.client.query("counter", { get_count: {} })
-  }
-
-  increment = (env = this.env) : Promise<BlockTxBroadcastResult> => {
-    return env.client.execute(env.wallets.validator, "counter", { increment: {} })
-  }
-  
-  reset = (env = this.env, count: number ) : Promise<BlockTxBroadcastResult> => {
-    return env.client.execute(env.wallets.validator, "counter", { reset: { count } })
   }
 };
 
