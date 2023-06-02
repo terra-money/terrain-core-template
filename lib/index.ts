@@ -13,11 +13,11 @@ export class Lib {
   }
 
   increment = (env = this.env) : Promise<WaitTxBroadcastResult> => {
-    return env.client.execute( env.wallets.validator, "{{project-name}}", { increment: {} })
+    return env.client.execute("{{project-name}}", env.wallets.validator, { increment: {} })
   }
   
   reset = (env = this.env, count: number ) : Promise<WaitTxBroadcastResult> => {
-    return env.client.execute(env.wallets.validator, "{{project-name}}", { reset: { count } })
+    return env.client.execute("{{project-name}}", env.wallets.validator, { reset: { count } })
   }
 };
 
