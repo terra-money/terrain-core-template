@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "dependencies": {
-    "@terra-money/terrain": "^0.5.8"
+    "@terra-money/feather.js": "^1.0.4",
+    "@terra-money/terrain": "^0.7.0"
   },
   "workspaces": [
     "frontend"

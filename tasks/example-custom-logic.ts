@@ -1,5 +1,5 @@
 import { Env, task } from "@terra-money/terrain";
-import { MnemonicKey } from "@terra-money/terra.js"
+import { MnemonicKey } from "@terra-money/feather.js"
 
 task(async (_env: Env) => {
   console.log("creating new key");
